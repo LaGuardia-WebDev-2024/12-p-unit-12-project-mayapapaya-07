@@ -1,15 +1,15 @@
 <!-- Unit 12 Project
 Requirements
-[  ] $() Select by Element, ID AND Class 
-[  ] Use Three Different jQuery Methods 
-[  ] Add Five CSS Declarations
-[  ] Include Three Images
+[ x ] $() Select by Element, ID AND Class 
+[ x ] Use Three Different jQuery Methods 
+[ x ] Add Five CSS Declarations
+[ x ] Include Three Images
 
 Select ONE Additional 
 [ no ] Feature 1 - Use .addClass() method
 [ no ] Feature 2 - Use a variable in javaScript 
 [ no ] Feature 3 - Use .mouseover() method
-[ no ] Feature 4 - Use .show() method
+[ yes ] Feature 4 - Use .show() method
 [ no ] Feature 5 - Use .append() method
 -->
 
@@ -25,36 +25,54 @@ Select ONE Additional
     <button id="mem1-button">Memory #1</button>
     <button id="mem2-button">Memory #2</button>
     <button id="mem3-button">Memory #3</button>
-    <h1>My Top 3 Memories of <span>This Year</span></h1>
+    <h1>My favorite baby <span> photos!</span></h1>
     <ol>
       <li>
-        <h3 id="mem1">Memory #1</h3>
-        <p>More about this memory.</p>
-      </li>
+        <h3 id="mem1">Maya's 1st birthday</h3>
+        <p class="birthday" style="display:none"> 
+        Even though I don't remember this birthday, whenever I see this photo I feel like I remember it. I don't think I have ever seen mami happier or prettier than in this photo (she looks like a barbie princess!), and I can really feel the love of my family. 
+        </p>
+        <img width="400" class="birthday-picture" style="display:none" src="https://cdn.glitch.global/b74ebdf8-2496-41ae-ad02-4dafc230586d/IMG_1576.jpg?v=1745934583326"
+     
+     </li>
 
       <li>
-        <h3 id="mem2">Memory #2</h3>
-        <p>More about this memory.</p>
+        <h3 id="mem2">Posing in a tutu with Meowzers</h3>
+        <p class="meowz" style="display:none">
+        I was around 8 or 9 when I got my cat Mieko, but I always just called her 'Meowzers'. I was wearing a tutu from ballet class and holding my cat which I can't really do anymore since she's a fussy teenager. I'm usually wearing a tutu in most of my baby pictures for some reason. I find this photo so cute, because we are both babies and it shows how much we have grown up together. 
+        </p>
+         <img width="300" class="meowz-picture" style="display:none" src="https://cdn.glitch.global/b74ebdf8-2496-41ae-ad02-4dafc230586d/IMG_1409.jpg?v=1745934789791"
+    
       </li>
-
+  
       <li>
-        <h3 id="mem3">Memory #3</h3>
-        <p>More about this memory</p>
-      </li>
+        <h3 id="mem3">Jalen praying</h3>
+      <p class="brother" style="display:none">
+      Jalen in my baby brother, and right jnow he's 2 years old. I like to think he was praying in his sleep, and giving thanks for the yummy milk. 
+        </p>
+     <img width="300" class="brother-picture" style="display:none" src="https://cdn.glitch.global/b74ebdf8-2496-41ae-ad02-4dafc230586d/IMG_1408.jpg?v=1745934806484"
+  
+          </li>
     </ol>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       $("#mem1-button").click(function () {
-        $("#mem1").css("color", "purple");
+        $("#mem1").css("color", "LightCoral");
+        $(".birthday").show(2000);
+        $(".birthday-picture").show(2000);
       });
 
       $("#mem2-button").click(function () {
-        $("#mem2").css("color", "blue");
+        $("#mem2").css("color", "LightCoral");
+        $(".meowz").show(2000);
+        $(".meowz-picture").slideDown(2000)
       });
 
       $("#mem3-button").click(function () {
-        $("#mem3").css("color", "green");
+        $("#mem3").css("color", "LightCoral");
+        $(".brother").show(2000);
+        $(".brother-picture").fadeIn(2000)
       });
     </script>
   </body>
